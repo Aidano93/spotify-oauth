@@ -4,23 +4,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <script src="app.js" defer></script>
   <title>Document</title>
 </head>
-<body>
-  <h1>Your Top 10 artists:
-    <ul>
-      <li id="top-1"></li>
-      <li id="top-2"></li>
-      <li id="top-3"></li>
-      <li id="top-4"></li>
-      <li id="top-5"></li>
-      <li id="top-6"></li>
-      <li id="top-7"></li>
-      <li id="top-8"></li>
-      <li id="top-9"></li>
-      <li id="top-10"></li>
+<body class="bg-secondary">
+  <div class="container-* container bg-light p-3">
+    <h2>Artists:</h2>
+    <button class="btn btn-med btn-success" id="btn-a-long">All-time</button>
+    <button class="btn btn-med btn-success" id="btn-a-med">Past 6 months</button>
+    <button class="btn btn-med btn-success" id="btn-a-short">Last Month</button>
+  </div>
+  <div class="container-* container bg-light p-3">
+    <h2>Tracks:</h2>
+    <button class="btn btn-med btn-success" id="btn-t-long">All-time</button>
+    <button class="btn btn-med btn-success" id="btn-t-med">Past 6 months</button>
+    <button class="btn btn-med btn-success" id="btn-t-short">Last Month</button>
+  </div>
+  <div class="container-* container bg-light p-3">
+    <h2>Your Top 10:</h2>
+    <ul class="list-group">
+      <li class="list-group-item" id="top-1"></li>
+      <li class="list-group-item" id="top-2"></li>
+      <li class="list-group-item" id="top-3"></li>
+      <li class="list-group-item" id="top-4"></li>
+      <li class="list-group-item" id="top-5"></li>
+      <li class="list-group-item" id="top-6"></li>
+      <li class="list-group-item" id="top-7"></li>
+      <li class="list-group-item" id="top-8"></li>
+      <li class="list-group-item" id="top-9"></li>
+      <li class="list-group-item" id="top-10"></li>
     </ul>
-  </h1>
+  </div>
+ 
 </body>
 </html>

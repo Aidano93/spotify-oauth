@@ -18,8 +18,8 @@ const access_token = params.access_token,
       refresh_token = params.refresh_token,
       error = params.error;
 
-
-fetch("https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=10", {
+const getTopData = (type, time) => {
+  fetch(`https://api.spotify.com/v1/me/top/${type}?time_range=${time}_term&limit=10`, {
   headers: {
     Accept: "application/json",
     Authorization: `Bearer ${access_token}`,
@@ -62,3 +62,37 @@ fetch("https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=10
       .catch(function(error){
         console.log(error);
       });
+}
+//Artist buttons
+const artistBtnLong = document.querySelector('#btn-a-long');
+artistBtnLong.addEventListener('click', ()=> {
+  getTopData('artists', 'long');
+})
+
+const artistBtnMed = document.querySelector('#btn-a-med');
+artistBtnMed.addEventListener('click', ()=> {
+  getTopData('artists', 'medium');
+})
+
+const artistBtnShort = document.querySelector('#btn-a-short');
+artistBtnShort.addEventListener('click', ()=> {
+  getTopData('artists', 'short');
+})
+
+// Track buttons
+const trackBtnLong = document.querySelector('#btn-t-long');
+trackBtnLong.addEventListener('click', ()=> {
+  getTopData('tracks', 'long');
+})
+
+const trackBtnMed = document.querySelector('#btn-t-med');
+trackBtnMed.addEventListener('click', ()=> {
+  getTopData('tracks', 'medium');
+})
+
+const trackBtnShort = document.querySelector('#btn-t-short');
+trackBtnShort.addEventListener('click', ()=> {
+  getTopData('tracks', 'short');
+})
+
+
